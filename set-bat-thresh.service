@@ -1,0 +1,11 @@
+[Unit]
+Description=Setup ThinkPad Battery Threshold
+
+[Service]
+Type=oneshot
+User=root
+ExecStartPre=/bin/sleep 30
+ExecStart=/home/sititou70/tp-bat-utils/set-bat-thresh.sh
+
+[Install]
+WantedBy=multi-user.target
